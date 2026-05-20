@@ -9,6 +9,7 @@ variable "compartments" {
   type = map(object({
     name        = string
     description = string
+    level       = number
     parent_key  = string # Use null for root-level, or the map key of another compartment
   }))
 }

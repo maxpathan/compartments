@@ -2,22 +2,32 @@
     "project1" = {
       name     = "Project1"
       description = "first project"
+      level    = 1
       parent_key  = null # Created directly under the tenancy root
     },
     "project2" = {
       name        = "Project2"
       description = "second project"
+      level    = 1
       parent_key  = null # Nested inside the Production compartment
     },
     "project2nw" = {
       name        = "network"
       description = "P2 Network"
+      level    = 2
       parent_key  = "project2"
     },
     "project1nw" = {
       name        = "network"
       description = "P1 Network"
+      level    = 2
       parent_key  = "project1"
+    },
+    "project1nwsub" = {
+      name        = "subnet"
+      description = "P1 Subnet"
+      level    = 3
+      parent_key  = "project1nw"
     }
   }
 
